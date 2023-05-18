@@ -11,7 +11,6 @@ Two annotation tasks are designed for BUMP, where Task 1 is taxonomy-based (a sp
 ### Task 1
 For Task 1, we randomly select 100 article-summary pairs from the test set of the CNN/DailyMail dataset. Each pair is then annotated following the error taxonomy below:
 #### Taxonomy
-Error type taxonomy
 
 |Error Type|Description|
 |---|---|
