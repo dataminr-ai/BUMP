@@ -7,7 +7,10 @@ This repo contains the dataset proposed in our paper [BUMP: A Benchmark of Unfai
 
 Example from BUMP dataset. An annotator constructs an unfaithful summary containing an *Extrinsic Entity Error* by replacing the word `homegrown` in the reference summary with the word `foreign`. The reference and edited summary form a minimal unfaithful summary pair. Faithfulness metrics are evaluated on both the reference and edited summary and compared to measure whether the metric is consistent, e.g., in this example, **QuestEval** and **CoCo** are consistent, while **FactCC** is not.
 
-### Taxonomy
+Two annotation tasks are designed for BUMP, where Task 1 is taxonomy-based (a specific error type is required for the edited summary), and Task 2 allows freestyle edits (i.e., no error type constraints are imposed).
+### Task 1
+For Task 1, we randomly select 100 article-summary pairs from the test set of the CNN/DailyMail dataset. Each pair is then annotated following the error taxonomy below:
+#### Taxonomy
 Error type taxonomy
 
 |Error Type|Description|
@@ -19,7 +22,10 @@ Error type taxonomy
 |Intrinsic Error|Error derived from information within the source article.|
 |Extrinsic Error|Error contains information not present in the source article.|
 
-### Statistics
+### Task 2
+For Task 2, we select an additional 100 random article-summary pairs from the CNN/DailyMail dataset and each pair is annotated in freestyle edits.
+
+## Statistics
 BUMP dataset statistics
 
 |              |           | Task 1 | Task 2 |
@@ -34,12 +40,12 @@ BUMP dataset statistics
 | Other        | -         |   0    |   5    |
 | Total        |           |  693   |  196   |
 
-### Meta-Evaluation
-#### Consistency Evaluation
+## Meta-Evaluation
+### Consistency Evaluation
 ![](figures/consistency.png)
 **Consistency (%) of faithfulness evaluation metrics**. `BART`: `BARTScore`, `QAFaEv`: `QAFactEval`, `BERT`: `BERTScore`, `QuEv`: `QuestEval`, `R-2`: `ROUGE-2`. All values are color-coded. For each row, `* (p < 0.05)` and `** (p < 0.01)` indicate the results are statistically significant when comparing the best to the second-best metric. 
 
-#### ROC AUC Evaluation
+### ROC AUC Evaluation
 ![](figures/AUC_ROC.png)
 **ROC AUC (%) of faithfulness evaluation metrics**. `BART`: `BARTScore`, `QAFaEv`: `QAFactEval`, `BERT`: `BERTScore`, `QuEv`: `QuestEval`, `R-2`: `ROUGE-2`. All values are color-coded. For each row, `* (p < 0.05)` and `** (p < 0.01)` indicate the results are statistically significant when comparing the best to the second-best metric. 
 
