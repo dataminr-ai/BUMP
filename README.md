@@ -1,6 +1,6 @@
 # BUMP: A Benchmark of Unfaithful Minimal Pairs for Meta-Evaluation of Faithfulness Metrics
 
-This repo contains the dataset proposed in our paper [BUMP: A Benchmark of Unfaithful Minimal Pairs for Meta-Evaluation of Faithfulness Metrics](PlaceholderLink).
+This repo contains the dataset proposed in our paper [BUMP: A Benchmark of Unfaithful Minimal Pairs for Meta-Evaluation of Faithfulness Metrics](https://aclanthology.org/2023.acl-long.716/).
 
 ## Dataset
 ![](figures/hook.png)
@@ -50,8 +50,25 @@ BUMP dataset statistics
 
 
 ## Citation:
-If you find the data in this repo helpful, please cite [our paper](PlaceholderLink):
-```bibtex
-placeholder
-
+If you find the data in this repo helpful, please cite [our paper](https://aclanthology.org/2023.acl-long.716/):
+```
+@inproceedings{ma-etal-2023-bump,
+    title = "{BUMP}: A Benchmark of Unfaithful Minimal Pairs for Meta-Evaluation of Faithfulness Metrics",
+    author = "Ma, Liang  and
+      Cao, Shuyang  and
+      Logan IV, Robert L  and
+      Lu, Di  and
+      Ran, Shihao  and
+      Zhang, Ke  and
+      Tetreault, Joel  and
+      Jaimes, Alejandro",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.716",
+    pages = "12788--12812",
+    abstract = "The proliferation of automatic faithfulness metrics for summarization has produced a need for benchmarks to evaluate them. While existing benchmarks measure the correlation with human judgements of faithfulness on model-generated summaries, they are insufficient for diagnosing whether metrics are: 1) consistent, i.e., indicate lower faithfulness as errors are introduced into a summary, 2) effective on human-written texts, and 3) sensitive to different error types (as summaries can contain multiple errors). To address these needs, we present a benchmark of unfaithful minimal pairs (BUMP), a dataset of 889 human-written, minimally different summary pairs, where a single error is introduced to a summary from the CNN/DailyMail dataset to produce an unfaithful summary. We find BUMP complements existing benchmarks in a number of ways: 1) the summaries in BUMP are harder to discriminate and less probable under SOTA summarization models, 2) unlike non-pair-based datasets, BUMP can be used to measure the consistency of metrics, and reveals that the most discriminative metrics tend not to be the most consistent, and 3) unlike datasets containing generated summaries with multiple errors, BUMP enables the measurement of metrics{'} performance on individual error types.",
+}
 ```
